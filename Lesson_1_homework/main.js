@@ -56,4 +56,4 @@ let age = prompt("Enter your age: ");
 
 console.log(name);
 console.log(last_name);
-console.log(age);
+console.log(parseInt(age));
