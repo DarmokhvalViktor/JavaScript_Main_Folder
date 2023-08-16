@@ -52,8 +52,8 @@ console.log(typeof c);
 
 let name = prompt("Enter your name: ");
 let last_name = prompt("Enter your lastname: ");
-let age = prompt("Enter your age: ");
+let age = parseInt(prompt("Enter your age: "));
 
 console.log(name);
 console.log(last_name);
-console.log(parseInt(age));
+console.log(age);
