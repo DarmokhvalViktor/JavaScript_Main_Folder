@@ -131,7 +131,7 @@ if (x !== 0) {
 // 6)- Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить,
 // до якої четверті години попадає число(в першу, другу, третю или четверту частину години).
 let time = 5;
-if(0 <= time && time < 60) {
+if(time >= 0 && time < 60) {
     if(0 <= time && time < 15) {
         console.log("First quarter");
     } else if (15 <= time && time < 30) {
@@ -146,18 +146,14 @@ if(0 <= time && time < 60) {
 }
 
 // 7)- У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
-let day = 3;
+let day = 31;
 if(0 < day && day <= 31) {
-    switch (true) {
-        case (0 < day && day < 11) :
-            console.log("The first decade of the month")
-            break;
-        case (11 <= day && day < 21) :
-            console.log("The second decade of the month")
-            break;
-        case (21 <= day && day < 32) :
-            console.log("The third decade of the month")
-            break;
+    if(0 < day && day < 11) {
+        console.log("The first decade of the month")
+    } else if (11 <= day && day < 21) {
+        console.log("The second decade of the month")
+    } else {
+        console.log("The third decade of the month")
     }
 } else {
     console.log("??????")
