@@ -59,44 +59,30 @@ console.log(book6["authors"])
 
 // 4)- Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
-//Вирішив два підходи для створення зробити, кращий для використання той, який закоментував, чи інший?
+let user1 = {name: "user0", username: "userName0", password: 101647};
+let user2 = {name: "user1", username: "userName1", password: 146851};
+let user3 = {name: "user2", username: "userName2", password: 247879};
+let user4 = {name: "user3", username: "userName3", password: 312354};
+let user5 = {name: "user4", username: "userName4", password: 448795};
+let user6 = {name: "user5", username: "userName5", password: 512384};
+let user7 = {name: "user6", username: "userName6", password: 689477};
+let user8 = {name: "user7", username: "userName7", password: 748515};
+let user9 = {name: "user8", username: "userName8", password: 856418};
+let user10 = {name: "user9", username: "userName9", password: 965448};
 
-// let user1 = {name: "user0", username: "userName0", password: 101647};
-// let user2 = {name: "user1", username: "userName1", password: 146851};
-// let user3 = {name: "user2", username: "userName2", password: 247879};
-// let user4 = {name: "user3", username: "userName3", password: 312354};
-// let user5 = {name: "user4", username: "userName4", password: 448795};
-// let user6 = {name: "user5", username: "userName5", password: 512384};
-// let user7 = {name: "user6", username: "userName6", password: 689477};
-// let user8 = {name: "user7", username: "userName7", password: 748515};
-// let user9 = {name: "user8", username: "userName8", password: 856418};
-// let user10 = {name: "user9", username: "userName9", password: 965448};
+let users = {
+    user1,
+    user2,
+    user3,
+    user4,
+    user5,
+    user6,
+    user7,
+    user8,
+    user9,
+    user10,
+}
 
-// let users = {
-//     user1,
-//     user2,
-//     user3,
-//     user4,
-//     user5,
-//     user6,
-//     user7,
-//     user8,
-//     user9,
-//     user10,
-// }
-
-let users = [
-    {name: "user0", username: "userName0", password: 101647},
-    {name: "user1", username: "userName1", password: 146851},
-    {name: "user2", username: "userName2", password: 247879},
-    {name: "user3", username: "userName3", password: 312354},
-    {name: "user4", username: "userName4", password: 448795},
-    {name: "user5", username: "userName5", password: 512384},
-    {name: "user6", username: "userName6", password: 689477},
-    {name: "user7", username: "userName7", password: 748515},
-    {name: "user8", username: "userName8", password: 856418},
-    {name: "user9", username: "userName9", password: 965448},
-];
 console.log("password: " + users[0]["password"])
 console.log("password: " + users[1]["password"])
 console.log("password: " + users[2]["password"])
