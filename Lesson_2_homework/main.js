@@ -70,7 +70,7 @@ let user8 = {name: "user7", username: "userName7", password: 748515};
 let user9 = {name: "user8", username: "userName8", password: 856418};
 let user10 = {name: "user9", username: "userName9", password: 965448};
 
-let users = {
+let users = [
     user1,
     user2,
     user3,
@@ -80,10 +80,10 @@ let users = {
     user7,
     user8,
     user9,
-    user10,
-}
+    user10
+]
 
-console.log("password: " + users[0]["password"])
+console.log("password: " + users[0].password)
 console.log("password: " + users[1]["password"])
 console.log("password: " + users[2]["password"])
 console.log("password: " + users[3]["password"])
@@ -93,11 +93,6 @@ console.log("password: " + users[6]["password"])
 console.log("password: " + users[7]["password"])
 console.log("password: " + users[8]["password"])
 console.log("password: " + users[9]["password"])
-
-//Можливо код нижче це забіг вперед....
-// for (let i = 0; i < users.length; i++) {
-//     console.log("password: " + users[i]["password"])
-// }
 
 
 
@@ -206,6 +201,19 @@ if((typeof x2 === "number" && x2 === 0 || isNaN(x2)) || (typeof x2 === "boolean"
 } else {
     console.log(x2);
 }
+//верхнє - надлишкове. Можна кожне з них привести до булевого значення. Нижче приводимо, і кожен з них є фолс. або:
+if(!x2) {
+    x2 = "default";
+    console.log(x2);
+} else {
+    console.log(x2);
+}
+//Але цей варіант гірший - бо переприсвоюватися буде значення, не дуже відповідає завданню
+let c2 = NaN;
+c2 = c2 || "default";
+console.log(c2);
+
+
 //  11)    - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray.
 //  За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 
