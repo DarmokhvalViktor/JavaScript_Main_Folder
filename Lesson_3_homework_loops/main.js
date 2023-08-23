@@ -38,15 +38,15 @@ while(n2 < 20) {
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul>`);
 for (let i = 0; i < listOfItems.length; i++) {
     const listOfItem = listOfItems[i];
     document.write(`<div>
-                        <ul>
-                            <li>${listOfItem}</li>
-                        </ul>
+                        <li>${listOfItem}</li>
                     </div>`)
 
 }
+document.write(`</ul>`)
 // -----------------------------------------------
 //
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
@@ -150,32 +150,67 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
+// for(let user of users) {
+//     if(user.status) {
+//         document.write("User with status true: ")
+//         for(let field in user) {
+//             document.write(field + "-" + user[field] + " ");
+//         }
+//         document.write(`<br>`)
+//     }
+// }
+document.write("Users with status true: ")
 for(let user of users) {
     if(user.status) {
-        document.write("User with status true: ")
+        document.write(`<div>`);
         for(let field in user) {
-            document.write(field + "-" + user[field] + " ");
+            document.write(`${field}: ${user[field]} `);
         }
-        document.write(`<br>`)
+        document.write(`</div>`);
+
     }
 }
 document.write(`<br>`)
+document.write("Users with status false: ")
 for(let user of users) {
     if(!user.status) {
-        document.write("User with status false: ")
+        document.write(`<div>`);
         for(let field in user) {
-            document.write(field + "-" + user[field] + " ");
+            document.write(`${field}: ${user[field]} `);
         }
-        document.write(`<br>`)
+        document.write(`</div>`);
+
     }
 }
 document.write(`<br>`)
+document.write("Users with status false: ")
 for(let user of users) {
     if(user.age > 30) {
-        document.write("User with age 30+: ")
+        document.write(`<div>`);
         for(let field in user) {
-            document.write(field + "-" + user[field] + " ");
+            document.write(`${field}: ${user[field]} `);
         }
-        document.write(`<br>`)
+        document.write(`</div>`);
+
     }
 }
+// document.write(`<br>`)
+// for(let user of users) {
+//     if(!user.status) {
+//         document.write("User with status false: ")
+//         for(let field in user) {
+//             document.write(field + "-" + user[field] + " ");
+//         }
+//         document.write(`<br>`)
+//     }
+// }
+// document.write(`<br>`)
+// for(let user of users) {
+//     if(user.age > 30) {
+//         document.write("User with age 30+: ")
+//         for(let field in user) {
+//             document.write(field + "-" + user[field] + " ");
+//         }
+//         document.write(`<br>`)
+//     }
+// }

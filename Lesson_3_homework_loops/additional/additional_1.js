@@ -28,17 +28,20 @@ console.log(arr2);
 
 let arr3 = [2,17,13,6,22,31,45,66,100,-18];
 console.log("___1___")
+// 1. перебрати його циклом while
 let i1 = 0;
 while(i1 < arr3.length) {
     console.log(arr3[i1]);
     i1++;
 }
 console.log("___2___")
+//     2. перебрати його циклом for
 for (let i = 0; i < arr3.length; i++) {
     const arr3Element = arr3[i];
     console.log(arr3Element);
 }
 console.log("___3___")
+//     3. перебрати циклом while та вивести  числа тільки з непарним індексом
 let i2 = 0;
 while(i2 < arr3.length) {
     if(i2 % 2 !== 0) {
@@ -47,12 +50,14 @@ while(i2 < arr3.length) {
     i2++;
 }
 console.log("___4___")
+// 4. перебрати циклом for та вивести  числа тільки з непарним індексом
 for (let i = 0; i < arr3.length; i++) {
     if(i % 2 !== 0) {
         console.log(arr3[i]);
     }
 }
 console.log("___5___")
+// 5. перебрати циклом while та вивести  числа тільки парні  значення
 let i3 = 0;
 while(i3 < arr3.length) {
     if(arr3[i3] % 2 === 0) {
@@ -61,6 +66,7 @@ while(i3 < arr3.length) {
     i3++;
 }
 console.log("___6___")
+// 6. перебрати циклом for та вивести  числа тільки парні  значення
 for (let i = 0; i < arr3.length; i++) {
     const arr3Element = arr3[i];
     if(arr3Element % 2 === 0) {
@@ -68,6 +74,7 @@ for (let i = 0; i < arr3.length; i++) {
     }
 }
 console.log("___7___")
+// 7. замінити кожне число кратне 3 на слово "okten"
 for (let i = 0; i < arr3.length; i++) {
     if(arr3[i] % 3 === 0) {
         arr3[i] = "okten";
@@ -75,12 +82,14 @@ for (let i = 0; i < arr3.length; i++) {
 }
 console.log(arr3);
 console.log("___8___")
+// 8. вивести масив в зворотньому порядку.
 for (let i = arr3.length - 1; i >= 0; i--) {
     const arr3Element = arr3[i];
     console.log(arr3Element);
 }
 console.log(arr3);
 console.log("___9.7___")
+// 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 let arrReversed_2 = [2,17,13,6,22,31,45,66,100,-18];
 for (let i = arrReversed_2.length - 1; i >= 0; i--) {
     if(arrReversed_2[i] % 3 === 0) {
