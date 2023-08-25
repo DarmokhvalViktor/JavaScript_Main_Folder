@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Lesson 3 homework. Loops.">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Some code refactoring and clean-ups.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/additional/additional_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/additional/additional_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/additional/additional_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/additional/additional_2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/additional_2_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/additional_2_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/additional_4_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/additional_4_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_3_homework_loops/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_3_homework_loops/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -48,7 +42,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +64,10 @@
       <workItem from="1692640514551" duration="1728000" />
       <workItem from="1692721552595" duration="2386000" />
       <workItem from="1692775376243" duration="15735000" />
-      <workItem from="1692806565492" duration="2833000" />
+      <workItem from="1692806565492" duration="3454000" />
+      <workItem from="1692866937128" duration="71000" />
+      <workItem from="1692867024173" duration="65000" />
+      <workItem from="1692954268323" duration="7043000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692800878674</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Some code refactoring and clean-ups.">
+      <created>1692815356289</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692815356289</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +157,7 @@
     <MESSAGE value="Some more code clean-up and refactoring." />
     <MESSAGE value="Even more code refactoring" />
     <MESSAGE value="Lesson 3 homework. Loops." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 3 homework. Loops." />
+    <MESSAGE value="Some code refactoring and clean-ups." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some code refactoring and clean-ups." />
   </component>
 </project>
