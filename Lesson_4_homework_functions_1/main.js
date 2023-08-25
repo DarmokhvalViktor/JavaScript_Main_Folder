@@ -124,9 +124,9 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     for (const element of currencyValues) {
         if (element.currency === exchangeCurrency) {
             currencyValue = element.value;
+            return (sumUAH / currencyValue);
         }
     }
-    return (sumUAH / currencyValue);
 }
 
 console.log(exchange(10000, [{currency: `USD`, value: 40}, {currency: `EUR`, value: 42}, {currency: `GPB`, value: 46}], `USD`));
