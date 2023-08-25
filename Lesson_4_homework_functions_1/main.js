@@ -127,6 +127,7 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
             return (sumUAH / currencyValue);
         }
     }
+    return "Wrong currency";
 }
 
 console.log(exchange(10000, [{currency: `USD`, value: 40}, {currency: `EUR`, value: 42}, {currency: `GPB`, value: 46}], `USD`));
