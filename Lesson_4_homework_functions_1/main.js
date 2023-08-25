@@ -120,7 +120,6 @@ console.log(swap(numbersArray, 0, 1));
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
-    result = 0;
     let currencyValue = null;
     for (const element of currencyValues) {
         if (element.currency === exchangeCurrency) {
