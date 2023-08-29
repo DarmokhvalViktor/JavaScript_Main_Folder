@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="some code refactoring" />
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Added if unused currency.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +42,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,6 +68,9 @@
       <workItem from="1692866937128" duration="71000" />
       <workItem from="1692867024173" duration="65000" />
       <workItem from="1692954268323" duration="8646000" />
+      <workItem from="1692984476136" duration="2182000" />
+      <workItem from="1693236814343" duration="2047000" />
+      <workItem from="1693323934904" duration="6002000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -151,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692966972078</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added if unused currency.">
+      <created>1692984629202</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692984629202</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +192,7 @@
     <MESSAGE value="Homework #4. Functions_1" />
     <MESSAGE value="Homework #4. Functions_1. Removed redundant variable." />
     <MESSAGE value="some code refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="some code refactoring" />
+    <MESSAGE value="Added if unused currency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added if unused currency." />
   </component>
 </project>
