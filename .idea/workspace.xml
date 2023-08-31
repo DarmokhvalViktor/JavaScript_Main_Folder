@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Added if unused currency.">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Lesson 5 homework. Functions_2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_5_homework_functions_2/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_5_homework_functions_2/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,9 @@
       <workItem from="1692954268323" duration="8646000" />
       <workItem from="1692984476136" duration="2182000" />
       <workItem from="1693236814343" duration="2047000" />
-      <workItem from="1693323934904" duration="6002000" />
+      <workItem from="1693323934904" duration="6474000" />
+      <workItem from="1693410475866" duration="3628000" />
+      <workItem from="1693498952268" duration="10368000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -163,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692984629202</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Lesson 5 homework. Functions_2.">
+      <created>1693336784500</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693336784500</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +203,7 @@
     <MESSAGE value="Homework #4. Functions_1. Removed redundant variable." />
     <MESSAGE value="some code refactoring" />
     <MESSAGE value="Added if unused currency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added if unused currency." />
+    <MESSAGE value="Lesson 5 homework. Functions_2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5 homework. Functions_2." />
   </component>
 </project>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function fun(a, b) {
+        console.log(a + b)
+    }
+    function fun(a, b, c){
+        console.log(a + b + c);
+    }
+    fun(1, 2, 3);
+
+    // Є дві важливі особливості назви func, через які воно дається:
+    //
+    //     Вона дозволяє функції посилатися на себе.
+    //     Вона не доступна за межами функції.
+    // let sayHi = function(who) {
+    //     if (who) {
+    //         alert(`Hello, ${who}`);
+    //     } else {
+    //         sayHi("Guest");
+    //     }
+    // };
+    //
+    // let welcome = sayHi;
+    // sayHi = null;
+    //
+    // welcome();
+    // let sayHi = function func(who) {
+    //     if (who) {
+    //         alert(`Привіт, ${who}`);
+    //     } else {
+    //         func("Гість");
+    //     }
+    // };
+    //
+    // let welcome = sayHi;
+    // sayHi = null;
+    //
+    // welcome();
+</script>
+
+</body>
+</html>

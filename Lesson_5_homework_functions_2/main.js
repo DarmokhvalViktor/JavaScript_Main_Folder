@@ -8,6 +8,7 @@ console.log(sCircle(2));
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 let sCylinder = (h, r) => 2 * Math.PI * r * (h + r);
 console.log(sCylinder(2, 5));
+console.log(sCylinder(15, 3));
 // - створити функцію яка приймає масив та виводить кожен його елемент
 let arrayPrinter = (array) => {
     for (const elem of array) {
