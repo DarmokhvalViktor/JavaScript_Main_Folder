@@ -93,6 +93,24 @@ console.log(xxx);
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
+function createCardDeck() {
+    this.cardSuit = ["spades", "diamonds", "hearts", "clubs"];
+    this.value = ["6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
+    this.color = ["red", "black"];
+    let resultingDeck = []
+    for (const suit of this.cardSuit) {
+        for (const valElement of this.value) {
+            if(suit === "diamonds" || suit === "hearts") {
+                resultingDeck.push({cardSuit: suit, value: valElement, color: "red"})
+            } else {
+                resultingDeck.push({cardSuit: suit, value: valElement, color: "black"})
+            }
+        }
+    }
+    return resultingDeck;
+}
+let deck4 = createCardDeck();
+console.log(deck4);
 let cardDeck = [
     {cardSuit: "spades", value: "6", color: "black"},
     {cardSuit: "spades", value: "7", color: "black"},
