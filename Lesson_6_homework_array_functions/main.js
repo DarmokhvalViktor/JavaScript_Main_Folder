@@ -23,7 +23,9 @@ console.log(string5.toLowerCase());
 console.log(string6.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
-let dirtyString = ' dirty string   ';
+let dirtyString = ' dirty     string   ';
+let resss = dirtyString.split(" ").filter((c) => c.length).join(" ");
+console.log(resss);
 console.log(dirtyString.trim());
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
@@ -33,7 +35,9 @@ let string7 = 'Ревуть воли як ясла повні';
 function stringToArray(string) {
     return string.split(" ");
 }
+let stringToArr = (arr) => str.split(" ");
 console.log(stringToArray(string7));
+
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
 let numbersArray = [10,8,-7,55,987,-1011,0,1050,0];
 let strAr = numbersArray.map(s => s.toString());
@@ -47,13 +51,29 @@ console.log(strAr, typeof strAr[0])
 let numsArray = [11,21,3, 44, 55, 231, 5, 9];
 function sortNums(array, direction) {
     if(direction === "ascending") {
-        return array.sort((n1, n2) => {return n1 - n2})
+        array = array.sort((n1, n2) => {return n1 - n2})
     } if(direction === "descending") {
-        return array.sort((n1, n2) => {return n2 - n1})
+        array = array.sort((n1, n2) => {return n2 - n1})
     }
+    return array;
+}
+let sortNum = (array, direction) => {
+    switch(direction) {
+        case "ascending":
+            array = array.sort((a, b) => a - b);
+            break;
+        case "descending":
+            array = array.sort((a, b) => b - a);
+            break;
+        default:
+            console.error("wrong direction type");
+    }
+    return array;
 }
 console.log(sortNums(numsArray, "descending"));
 console.log(sortNums(numsArray, "ascending"));
+console.log(sortNum(numsArray, "descending"));
+console.log(sortNum(numsArray, "ascending"));
 // ==========================
 // - є масив
 // let coursesAndDurationArray = [
@@ -79,7 +99,9 @@ coursesAndDurationArray.sort((a, b) => {return b.monthDuration - a.monthDuration
 console.log(coursesAndDurationArray);
 
 let filteredArray = coursesAndDurationArray.filter(value => value.monthDuration > 5);
+let filteredArray2 = coursesAndDurationArray.filter(({monthDuration}) => monthDuration > 5);
 console.log(filteredArray);
+console.log(filteredArray2);
 
 let xxx = coursesAndDurationArray.map( (value, index) => {
     return {id: index + 1, ...value}
@@ -97,15 +119,25 @@ function createCardDeck() {
     this.cardSuit = ["spades", "diamonds", "hearts", "clubs"];
     this.value = ["6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
     this.color = ["red", "black"];
-    let resultingDeck = []
+    // this.resultingDeck = []
+
+    // arr.map(item => item.cardSuit === 'diamond' || item.cardSuit === 'heart' ? item.color = 'red' : item.color = 'black')
+    // return arr
+
     for (const suit of this.cardSuit) {
-        for (const valElement of this.value) {
-            if(suit === "diamonds" || suit === "hearts") {
-                resultingDeck.push({cardSuit: suit, value: valElement, color: "red"})
-            } else {
-                resultingDeck.push({cardSuit: suit, value: valElement, color: "black"})
-            }
+        let blackS = ["spades", "clubs"];
+        let redS = ["diamonds", "hearts"];
+        let color = "";
+        if(blackS.includes(suit)) {
+            color = "black"
         }
+        if(redS.includes(suit)) {
+            color = "red"
+        }
+        for (const valElement of this.value) {
+            cardDeck.push(suit, valElement, color);
+        }
+
     }
     return resultingDeck;
 }
@@ -152,8 +184,6 @@ let cardDeck = [
 console.log(cardDeck);
 
 // - знайти піковий туз
-
-                                        //Filter or find?
 console.log(cardDeck.find((element) => {
     return (element.cardSuit === "spades" && element.value === "ace");
 }))
@@ -176,8 +206,9 @@ console.log(cardDeck.filter((element) => {
 // - всі трефи від 9 та більше
 //                                        Чи є елегантніше рішення, ніж тупим брутфорсом?
 console.log(cardDeck.filter((element) => {
-    return (element.cardSuit === "clubs" && (element.value === "9" || element.value === "10"
-        || element.value === "jack" ||element.value === "queen" ||element.value === "king" || element.value === "ace"));
+    // return (element.cardSuit === "clubs" && (element.value === "9" || element.value === "10"
+    //     || element.value === "jack" ||element.value === "queen" ||element.value === "king" || element.value === "ace"));
+    return (element.cardSuit === "clubs" && ['9', '10', 'jack', 'queen', 'king', 'ace'].includes(element.value))
 }))
 
 // =========================
@@ -190,15 +221,18 @@ console.log(cardDeck.filter((element) => {
 //     clubs:[]
 // }
 let newCardDeck = cardDeck.reduce((accumulator, card) => {
-    if(card.cardSuit === "diamonds") {
-        accumulator.diamonds.push(card);
-    } else if(card.cardSuit === "spades") {
-        accumulator.spades.push(card);
-    } else if(card.cardSuit === "hearts") {
-        accumulator.hearts.push(card);
-    } else {
-        accumulator.clubs.push(card);
-    }
+
+    accumulator[card.cardSuit].push(card);
+
+    // if(card.cardSuit === "diamonds") {
+    //     accumulator.diamonds.push(card);
+    // } else if(card.cardSuit === "spades") {
+    //     accumulator.spades.push(card);
+    // } else if(card.cardSuit === "hearts") {
+    //     accumulator.hearts.push(card);
+    // } else {
+    //     accumulator.clubs.push(card);
+    // }
     return accumulator;
 }, {spades:[], diamonds:[], hearts:[], clubs:[]});
 console.log(newCardDeck);

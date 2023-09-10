@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Lesson 6 homework. Array, string functions and array callback functions.">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Created function to create a card deck instead of hardcoding.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_1_homework/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_homework/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_1_homework/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_homework/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_2_homework/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_2_homework/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson_6_homework_array_functions/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_6_homework_array_functions/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +21,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -39,13 +43,26 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Programming/__Okten_School/JavaScript/JavaScript/Lesson_1_homework&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\__Okten_School\JavaScript\JavaScript\Lesson_1_homework" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main2.ts" type="NodeJSConfigurationType" nameIsGenerated="true" node-parameters="$/FilePathRelativeToProjectRoot$" path-to-js-file="Lesson_1_homework/main2.ts" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +92,20 @@
       <workItem from="1693410475866" duration="3628000" />
       <workItem from="1693498952268" duration="11224000" />
       <workItem from="1693558494713" duration="94000" />
-      <workItem from="1693563516006" duration="990000" />
+      <workItem from="1693563516006" duration="10667000" />
+      <workItem from="1693653374115" duration="453000" />
+      <workItem from="1693661931237" duration="2274000" />
+      <workItem from="1693666681156" duration="2770000" />
+      <workItem from="1693813000756" duration="2399000" />
+      <workItem from="1693841510584" duration="2336000" />
+      <workItem from="1693845929220" duration="4494000" />
+      <workItem from="1693906841713" duration="1365000" />
+      <workItem from="1694015896175" duration="2127000" />
+      <workItem from="1694073127971" duration="6549000" />
+      <workItem from="1694091042041" duration="1270000" />
+      <workItem from="1694168598623" duration="624000" />
+      <workItem from="1694184531949" duration="4623000" />
+      <workItem from="1694249954634" duration="11493000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -182,11 +212,24 @@
       <option name="project" value="LOCAL" />
       <updated>1693514380925</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Created function to create a card deck instead of hardcoding.">
+      <created>1693568578245</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693568578245</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Lesson_1_homework/main2.js" />
+        <option value="$PROJECT_DIR$/Lesson_2_homework/main2.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -214,6 +257,7 @@
     <MESSAGE value="Added if unused currency." />
     <MESSAGE value="Lesson 5 homework. Functions_2." />
     <MESSAGE value="Lesson 6 homework. Array, string functions and array callback functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6 homework. Array, string functions and array callback functions." />
+    <MESSAGE value="Created function to create a card deck instead of hardcoding." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created function to create a card deck instead of hardcoding." />
   </component>
 </project>
