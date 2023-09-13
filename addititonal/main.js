@@ -371,18 +371,42 @@ console.log(obj.getFullName());
 //
 // Напишите метод filterEvenNumbers для массива, который возвращает новый массив, содержащий только чётные числа.
 
+function filterEvenNumbers(array) {
+    return array.filter(s => s % 2 === 0);
+}
 
+console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6, 7,8, 9, 432, 321, 4,43 ,5, 645, 23, 4, 2, 452, 654]))
 
 //
 // Создайте метод isAdult для объекта, представляющего человека с полем age, который возвращает true,
 // если возраст больше или равен 18, и false в противном случае.
 
+function isAdult(person) {
+    return person.age > 18;
+}
+
+console.log(isAdult({name: "fdsfds", age: 10}));
+
 //
 // Напишите метод capitalizeFirstLetter для строки, который возвращает новую строку с первой буквой в верхнем регистре.
+
+function capitalizeFirstLetter(string) {
+    let firstChar = string[0];
+    firstChar = firstChar.toUpperCase();
+    return firstChar.concat(string.substring(1));
+}
+
+console.log(capitalizeFirstLetter("this is"));
 
 //
 // Создайте метод calculateTotalPrice для массива объектов, представляющих товары с полями price и quantity,
 // который возвращает общую стоимость всех товаров.
+
+function calculateTotalPrice(array) {
+    return array.reduce((accumulator, value) => accumulator + (value.price * value.quantity), 0)
+}
+
+console.log(calculateTotalPrice([{price: 20, quantity: 5}, {price: 50, quantity: 5}, {price: 20, quantity: 10}]));
 
 //
 // Напишите метод findMax для массива чисел, который возвращает максимальное значение в массиве.

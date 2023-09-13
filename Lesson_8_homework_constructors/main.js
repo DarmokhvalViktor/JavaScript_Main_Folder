@@ -1,6 +1,5 @@
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
-
 function User(id, name, surname, email, phone) {
     this.id = id;
     this.name = name;
@@ -81,6 +80,16 @@ Car.prototype.info = function(){
         maxVelocity - ${this.maxVelocity}
         engineCapacity - ${this.engineCapacity}`)
 };
+Car.prototype.info2 = function() {
+    console.log("____INFO 2_____")
+    for (const key in this) {
+        if(typeof this[key] === "function") {
+            continue;
+        }
+        console.log(`${key.toUpperCase()}: `, this[key]);
+    }
+    console.log("____INFO 2_____")
+}
 Car.prototype.increaseMaxSpeed = function(newSpeed) {
     this.maxVelocity = newSpeed;
 }
@@ -93,6 +102,7 @@ Car.prototype.addDriver = function(driver) {
 let car1 = new Car("Impreza", "SubuWu", 2016, 256, 400);
 car1.drive();
 car1.info();
+car1.info2();
 car1.increaseMaxSpeed(300);
 car1.changeYear(2020);
 car1.info();
@@ -179,8 +189,17 @@ class LuckyPrince {
         this.age = age;
         this.glassSlipperSize = glassSlipperSize;
     }
+    findPrincess = function(harem) {
+        for (const woman of harem) {
+            if(woman.footSize === this.glassSlipperSize) {
+                return woman;
+            }
+        }
+    }
 }
 const prince = new LuckyPrince("Charming", 25, 38);
+console.log(prince.findPrincess(harem));
+//Перемістити до принца як метод
 for (const cinderella of harem) {
     if(cinderella.footSize === prince.glassSlipperSize) {
         prince.cinderella = cinderella;
