@@ -250,21 +250,24 @@ coursesArray.forEach((course) => {
     let courseBlock = document.createElement("div");
     courseBlock.classList.add("courseBlock");
     for (let courseField in course) {
-        let fieldBlock = document.createElement("div");
-        fieldBlock.classList.add(`${courseField}`);
 
         if(courseField !== "modules") {
+            let fieldBlock = document.createElement("div");
+            fieldBlock.classList.add(`${courseField}`);
             fieldBlock.innerText = courseField + `: ` + course[courseField]
+            courseBlock.appendChild(fieldBlock)
         } else {
+            let fieldBlock = document.createElement("ul");
+            fieldBlock.classList.add(`${courseField}`);
             fieldBlock.innerText = courseField + ":"
             for (let i = 0; i < course[courseField].length; i++) {
                 let moduleLi = document.createElement("li");
                 moduleLi.innerText = course[courseField][i];
                 fieldBlock.appendChild(moduleLi);
             }
+            courseBlock.appendChild(fieldBlock)
         }
 
-        courseBlock.appendChild(fieldBlock);
     }
     sixthBlock.appendChild(courseBlock);
 })
