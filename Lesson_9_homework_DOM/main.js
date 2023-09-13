@@ -269,6 +269,16 @@ coursesArray.forEach((course) => {
     sixthBlock.appendChild(courseBlock);
 })
 
+let nodeListOf = document.querySelectorAll(".item-grid__item");
+let result = []
+nodeListOf.forEach((node) => {
+    let title = node.querySelector(".item-grid-card__title").innerText;
+    let author = node.querySelector(".item-grid-music-preview__author").innerText;
+    let mp3 = node.querySelector(".audio-player__wave").querySelector("audio").getAttribute("src");
+    result.push({"title: ": title, "author: ": author, "mp3: ": mp3});
+})
+console.log(result);
+
 
 
 

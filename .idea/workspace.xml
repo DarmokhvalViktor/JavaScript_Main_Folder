@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Homework № 8. Constructors, classes">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Homework № 9. DOM structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_8_homework_constructors/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_8_homework_constructors/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addititonal/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_9_homework_DOM/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_9_homework_DOM/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1694366910494" duration="8073000" />
       <workItem from="1694430522368" duration="2451000" />
       <workItem from="1694445133137" duration="4831000" />
-      <workItem from="1694590559496" duration="9254000" />
+      <workItem from="1694590559496" duration="11713000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694376771258</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Homework № 9. DOM structure">
+      <created>1694601263715</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1694601263715</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +282,7 @@
     <MESSAGE value="Created function to create a card deck instead of hardcoding." />
     <MESSAGE value="Some additional practice exercises" />
     <MESSAGE value="Homework № 8. Constructors, classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework № 8. Constructors, classes" />
+    <MESSAGE value="Homework № 9. DOM structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework № 9. DOM structure" />
   </component>
 </project>
