@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let jsonArray = localStorage.getItem("sessions");
+  let parsedArray = JSON.parse(jsonArray);
+  for (const session of parsedArray) {
+      console.log(session);
+      let sessDiv = document.createElement("div");
+      sessDiv.innerText = "year: " + session.year + ", month: " + session.month + ", day: " + session.day +
+          ", hour: " + session.hour + ", minute: " + session.minute + ", seconds: " + session.seconds;
+      document.body.append(sessDiv);
+  }
+
+</script>
+
+</body>
+</html>

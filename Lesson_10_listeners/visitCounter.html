@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let date = new Date();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let year = date.getFullYear();
+    let hour= date.getHours();
+    let min= date.getMinutes();
+    let sec = date.getSeconds()
+    console.log(month, day, year, hour, min);
+
+    let now = {month: month, day: day, year: year, hour: hour, minute: min, seconds: sec};
+    let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
+
+    sessions.push(now);
+    localStorage.setItem("sessions", JSON.stringify(sessions));
+</script>
+
+</body>
+</html>
