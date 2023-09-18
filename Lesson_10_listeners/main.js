@@ -71,7 +71,7 @@ resetNumber.addEventListener("click", function (e) {
 // При натисканні prev виводяться попередні 10 об'єктів
 
 let arrayForHundredElements = [];
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 400; i++) {
     arrayForHundredElements.push({name: "Element " + i, age: i, password: i * Math.floor(Math.random() * 50)})
 }
 
@@ -85,7 +85,7 @@ previous.onclick = function(e) {
     pageWithContent.innerText = "";
     e.preventDefault();
     if(pageCounter === 0) {
-        pageCounter = 90;
+        pageCounter = arrayForHundredElements.length - 10;
     } else {
         pageCounter -= 10;
     }
@@ -94,7 +94,7 @@ previous.onclick = function(e) {
 next.onclick = function(e) {
     pageWithContent.innerText = "";
     e.preventDefault();
-    if(pageCounter === 90) {
+    if(pageCounter === arrayForHundredElements.length - 10) {
         pageCounter = 0;
     } else {
         pageCounter += 10;
