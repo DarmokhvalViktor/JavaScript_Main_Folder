@@ -12,6 +12,7 @@ form1.onsubmit = function(e) {
 
     divOutside.append(divInside);
     document.body.prepend(divOutside);
+    form1.reset();
 }
 
 
