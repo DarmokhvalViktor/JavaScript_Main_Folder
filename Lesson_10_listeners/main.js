@@ -33,15 +33,18 @@ form1.onsubmit = function(e) {
 
 let counterContainer = document.getElementsByClassName("digit_block")[0];
 let resetNumber = document.getElementById("reset");
-let numberFromLocalStorage = localStorage.getItem("number");
+let numberFromLocalStorage = parseInt(localStorage.getItem("number"));
 
-if (numberFromLocalStorage) {
-    numberFromLocalStorage = parseInt(numberFromLocalStorage) + 1;
-    localStorage.setItem("number", numberFromLocalStorage);
-} else {
-    numberFromLocalStorage = 1;
-    localStorage.setItem("number", 1);
-}
+(numberFromLocalStorage === null) ? numberFromLocalStorage = 1 : numberFromLocalStorage = numberFromLocalStorage + 1;
+localStorage.setItem("number", numberFromLocalStorage);
+
+// if (numberFromLocalStorage) {
+//     numberFromLocalStorage = parseInt(numberFromLocalStorage) + 1;
+//     localStorage.setItem("number", numberFromLocalStorage);
+// } else {
+//     numberFromLocalStorage = 1;
+//     localStorage.setItem("number", 1);
+// }
 counterContainer.innerText = numberFromLocalStorage;
 
 resetNumber.addEventListener("click", function (e) {
@@ -82,8 +85,8 @@ let pageCounter = 0;
 
 window.onload = displayItems(pageCounter);
 previous.onclick = function(e) {
-    pageWithContent.innerText = "";
     e.preventDefault();
+    pageWithContent.innerText = "";
     if(pageCounter === 0) {
         pageCounter = arrayForHundredElements.length - 10;
     } else {
@@ -92,8 +95,8 @@ previous.onclick = function(e) {
     displayItems(pageCounter);
 }
 next.onclick = function(e) {
-    pageWithContent.innerText = "";
     e.preventDefault();
+    pageWithContent.innerText = "";
     if(pageCounter === arrayForHundredElements.length - 10) {
         pageCounter = 0;
     } else {
