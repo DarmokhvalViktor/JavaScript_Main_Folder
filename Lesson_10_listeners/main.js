@@ -8,6 +8,15 @@ form1.onsubmit = function(e) {
     let divOutside = document.getElementById("firstDiv");
 
     let divInside = document.createElement("div");
+    if(form1.userName.value.length === 0) {
+        form1.userName.value = "John";
+    }
+    if(form1.userSurname.value.length === 0) {
+        form1.userSurname.value = "Doe";
+    }
+    if(form1.userAge.value.length === 0) {
+        form1.userAge.value = 21;
+    }
     divInside.innerText = "UserName: " + form1.userName.value + "\r\nSurname: " + form1.userSurname.value + "\r\nAge: " + form1.userAge.value;
 
     divOutside.append(divInside);
@@ -129,6 +138,9 @@ form2.onsubmit = function(e) {
     if(checkIfElIsPresent) {
         checkIfElIsPresent.remove();
     }
+    if(form2.age.value.length === 0) {
+        form2.age.value = 0;
+    }
     let result = document.createElement("div");
     result.setAttribute("id", "ageCh")
 
@@ -145,6 +157,7 @@ form2.onsubmit = function(e) {
 
     result.append(resultingString, img);
     ageCheckerDiv.appendChild(result);
+    form2.reset();
 }
 
 
@@ -154,10 +167,14 @@ form2.onsubmit = function(e) {
 let form3 = document.forms.form3;
 form3.onsubmit = function(e) {
     e.preventDefault();
-    let rows = parseInt(form3.numberOfRows.value);
-    let columns = parseInt(form3.numberOfColumns.value);
-    let content = form3.content.value;
+    let rows = (() =>(form3.numberOfRows.value.length)? form3.numberOfRows.value: 3) ();
+    let columns = (() =>(form3.numberOfColumns.value.length)? form3.numberOfColumns.value: 3) ();
+    let content = (() =>(form3.content.value.length)? form3.content.value: 3) ();
+    console.log(rows);
+    console.log(columns);
+    console.log(content);
     let form3Div = document.getElementById("form3Div");
+
 
     //Refactored to improve readability
     let form3input = document.getElementById("form3input")
@@ -177,6 +194,7 @@ form3.onsubmit = function(e) {
         outside.appendChild(inside);
     }
     form3Div.append(outside);
+    form3.reset();
 }
 
 

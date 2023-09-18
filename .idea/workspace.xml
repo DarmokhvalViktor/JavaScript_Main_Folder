@@ -7,6 +7,7 @@
     <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Homework № 10. Events, listeners.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson_10_listeners/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_10_listeners/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_10_listeners/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_10_listeners/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +116,7 @@
       <workItem from="1694890472360" duration="1809000" />
       <workItem from="1694945572199" duration="4093000" />
       <workItem from="1694967200272" duration="3116000" />
-      <workItem from="1695027193570" duration="614000" />
+      <workItem from="1695027193570" duration="1583000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -271,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694949546917</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Homework № 10. Events, listeners.">
+      <created>1695029499031</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1695029499031</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
