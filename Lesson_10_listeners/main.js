@@ -74,44 +74,46 @@ resetNumber.addEventListener("click", function (e) {
 // При натисканні prev виводяться попередні 10 об'єктів
 
 let arrayForHundredElements = [];
-for (let i = 1; i <= 400; i++) {
+for (let i = 1; i <= 61; i++) {
     arrayForHundredElements.push({name: "Element " + i, age: i, password: i * Math.floor(Math.random() * 50)})
 }
 
 let pageWithContent = document.getElementById("pageWithContent");
 let previous = document.getElementById("previous")
 let next = document.getElementById("next")
-let pageCounter = 0;
+let page = 1;
 
-window.onload = displayItems(pageCounter);
-previous.onclick = function(e) {
-    e.preventDefault();
-    pageWithContent.innerText = "";
-    if(pageCounter === 0) {
-        pageCounter = arrayForHundredElements.length - 10;
+// !!!!ЗРОБИТИ TO_DO LIST~!!!!!
+
+displayItems(page);
+
+function displayItems(counter, limit = 10) {
+    let startIndex = (page - 1) * limit;
+    let endIndex = page * limit;
+
+    if (startIndex > 0) {
+        previous.removeAttribute('disabled');
     } else {
-        pageCounter -= 10;
+        previous.setAttribute('disabled', 'disabled');
     }
-    displayItems(pageCounter);
-}
-next.onclick = function(e) {
-    e.preventDefault();
-    pageWithContent.innerText = "";
-    if(pageCounter === arrayForHundredElements.length - 10) {
-        pageCounter = 0;
+    if (endIndex < arrayForHundredElements.length) {
+        next.removeAttribute('disabled');
     } else {
-        pageCounter += 10;
+        next.setAttribute('disabled', 'disabled');
+        endIndex = arrayForHundredElements.length;
     }
-    displayItems(pageCounter);
-}
-function displayItems(counter) {
-    for (let i = counter; i < counter + 10; i++) {
-        let element = document.createElement("p");
-        element.innerText = "name: " + arrayForHundredElements[i].name + ", age: " + arrayForHundredElements[i].age +
-            ", password: " + arrayForHundredElements[i].password;
-        pageWithContent.appendChild(element);
+
+    let arr = [];
+    for (let i = startIndex; i < endIndex; i++) {
+        let p = document.createElement("p");
+        p.innerText = `Name:  ${arrayForHundredElements[i].name}, age: ${arrayForHundredElements[i].age}, password: ${arrayForHundredElements[i].password}`;
+        arr.push(p);
     }
+    pageWithContent.replaceChildren(...arr);
 }
+previous.addEventListener("click", () => displayItems(page--));
+next.addEventListener("click", () => displayItems(page++));
+
 
 
 // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript,
@@ -167,40 +169,31 @@ form2.onsubmit = function(e) {
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
 let form3 = document.forms.form3;
+let wrapper = document.getElementById("result");
+
 form3.onsubmit = function(e) {
     e.preventDefault();
-    let rows = (() =>(form3.numberOfRows.value.length)? form3.numberOfRows.value: 3) ();
-    let columns = (() =>(form3.numberOfColumns.value.length)? form3.numberOfColumns.value: 3) ();
-    let content = (() =>(form3.content.value.length)? form3.content.value: 3) ();
-    console.log(rows);
-    console.log(columns);
-    console.log(content);
-    let form3Div = document.getElementById("form3Div");
 
-
-    //Refactored to improve readability
-    let form3input = document.getElementById("form3input")
-    if(form3input) {
-        form3input.remove();
-    }
-
-    let outside = document.createElement("div");
-    outside.setAttribute("id", "form3input")
+    let table = document.createElement("table");
+    let rows = parseInt(this.numberOfRows.value);
+    let columns = parseInt(this.numberOfColumns.value);
+    let content = this.content.value;
 
     for (let i = 0; i < rows; i++) {
-        let inside = document.createElement("div");
+        let tr = document.createElement("tr");
+
         for (let j = 0; j < columns; j++) {
-            let cont = document.createElement("div")
-            inside.append(content);
+            let td = document.createElement("td")
+            td.innerText = content;
+            tr.append(td);
         }
-        outside.appendChild(inside);
+        table.append(tr);
     }
-    form3Div.append(outside);
+    wrapper.append(table);
     form3.reset();
 }
-
-
 
 
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком,

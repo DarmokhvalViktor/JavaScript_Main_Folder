@@ -29,10 +29,14 @@
             border: solid 1px #3333;
             border-radius: 20%;
         }
-        #pageWithContent {
+        .pageWithContent {
             width: 400px;
             border: 1px solid #3333;
-            padding-left: 5px;
+            padding: 10px;
+        }
+        .item {
+            margin-top: 10px;
+            border: 2px red solid;
         }
         #toggleNahrjuk {
             width: 200px;
@@ -81,14 +85,13 @@
     </form>
 </div>
 
-<div id="form3Div">
-    <form action="" id="form3">
-        <input type="number" placeholder="Number of rows" name="numberOfRows">
-        <input type="number" placeholder="Number of columns" name="numberOfColumns">
-        <input type="text" placeholder="Content" name="content">
-        <button>Let's roll</button>
-    </form>
-</div>
+<form action="" id="form3">
+    <input type="number" placeholder="Number of rows" name="numberOfRows">
+    <input type="number" placeholder="Number of columns" name="numberOfColumns">
+    <input type="text" placeholder="Content" name="content">
+    <button>Let's roll</button>
+</form>
+<div id="result"></div>
 
 
 <div id="hryvnyaDiv">100 UAH</div>
