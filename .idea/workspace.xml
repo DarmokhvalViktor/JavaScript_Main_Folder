@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Small changes in lesson 10">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Additional To-Do\schedule planner. First step - can add new task, can delete tasks. Update button works but only once">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,25 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.16.1",
-    "javascript.nodejs.core.library.typings.version": "18.16.1",
-    "last_opened_file_path": "F:/Programming/__Okten_School/JavaScript/JavaScript/Lesson_1_homework",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Programming/__Okten_School/JavaScript/JavaScript/Lesson_1_homework&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Programming\__Okten_School\JavaScript\JavaScript\Lesson_1_homework" />
@@ -122,7 +122,10 @@
       <workItem from="1695046563785" duration="9480000" />
       <workItem from="1695129148203" duration="5254000" />
       <workItem from="1695212583711" duration="15908000" />
-      <workItem from="1695291363889" duration="13814000" />
+      <workItem from="1695291363889" duration="14494000" />
+      <workItem from="1695328616501" duration="3187000" />
+      <workItem from="1695368110381" duration="1217000" />
+      <workItem from="1695378021469" duration="9688000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -313,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695135901365</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Additional To-Do\schedule planner. First step - can add new task, can delete tasks. Update button works but only once">
+      <created>1695310587269</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1695310587269</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +368,7 @@
     <MESSAGE value="Homework № 9. DOM structure. Additional exercise with fetching date from site." />
     <MESSAGE value="Homework № 10. Events, listeners." />
     <MESSAGE value="Small changes in lesson 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes in lesson 10" />
+    <MESSAGE value="Additional To-Do\schedule planner. First step - can add new task, can delete tasks. Update button works but only once" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional To-Do\schedule planner. First step - can add new task, can delete tasks. Update button works but only once" />
   </component>
 </project>
