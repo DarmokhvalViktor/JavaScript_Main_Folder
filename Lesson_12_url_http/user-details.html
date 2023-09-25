@@ -16,9 +16,11 @@
 
         for(let key in object) {
             if(typeof object[key] === "object" && object[key] !== null) {
+                let li = document.createElement("li");
                 let ul = document.createElement("ul");
                 ul.innerText = `${key}:`
-                divToAppend.appendChild(ul);
+                li.appendChild(ul);
+                divToAppend.appendChild(li);
                 recursiveKeyValueGetter(object[key], ul);
             } else {
                 let li = document.createElement("li");
