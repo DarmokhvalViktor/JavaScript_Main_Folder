@@ -5,53 +5,128 @@
     <title>Title</title>
     <style>
 
-        /*!* Include the padding and border in an element's total width and height *!*/
+        /* Include the padding and border in an element's total width and height */
         * {
             box-sizing: border-box;
         }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: aliceblue;
+        }
 
-        /*!* Remove margins and padding from the list *!*/
+        #header {
+            display: flex;
+            flex-direction: column;
+            background: lightgoldenrodyellow;
+            margin: 0;
+            padding-top: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0 0 20px 0;
+        }
+        input, button {
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+        }
+        #new_task_form {
+            display: flex;
+        }
+        input::placeholder {
+            color: linen;
+        }
+        #input_task {
+            flex: 1 1 0;
+            background-color: darkgrey;
+            border-radius: 15px;
+            padding: 15px;
+            margin-right: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        #submit_task {
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 15px;
+            background-image: linear-gradient(to right, darkblue, darkred);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .content {
+            width: 100%;
+        }
+        #submit_task:hover {
+            opacity: 0.7;
+            font-size: 21px;
+        }
+        #submit_task:active {
+            opacity: 0.4;
+        }
+        h2 {
+            text-align: center;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightsteelblue;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            width: 100%;
+            display: block;
+            transition: 0.5s;
+        }
+        .text:not(:read-only) {
+            color: darkviolet;
+        }
+        .text.checked {
+            text-decoration: line-through;
+        }
+        /* Remove margins and padding from the list */
         ul {
             margin: 0;
             padding: 0;
         }
 
-        /*!* Style the list items *!*/
-        ul li {
+        /* Style the list items */
+        li {
             cursor: pointer;
             position: relative;
             padding: 12px 8px 12px 40px;
-            background: lightblue;
             font-size: 18px;
             transition: 0.5s;
             border: 1px solid lightgoldenrodyellow;
-
-            /*   !* make the list items unselectable *!*/
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
 
-        /*!* Set all odd list items to a different color (zebra-stripes) *!*/
-        ul li:nth-child(odd) {
-            background: silver;
+        /* Set all odd list items to a different color (zebra-stripes) */
+        li:nth-child(odd) {
+            background-color: lightslategrey;
         }
 
-        /*!* Darker background-color on hover *!*/
-        ul li:hover {
+        /* Darker background-color on hover */
+        li:hover {
             background: orange;
         }
 
-        /*!* When clicked on, add a background color and strike out text *!*/
-        ul li.checked {
+        /* When clicked on, add a background color and strike out text */
+        li.checked {
             background: limegreen;
-            color: #fff;
+
+        }
+        li.content {
             text-decoration: line-through;
         }
 
-        /*!* Add a "checked" mark when clicked on *!*/
-        ul li.checked:before {
+        /* Add a "checked" mark when clicked on */
+        li.checked:before {
             content: '';
             position: absolute;
             border-color: #fff;
@@ -63,196 +138,236 @@
             height: 15px;
             width: 7px;
         }
-
-        /*!* Style the close button *!*/
-        .close {
-            position: absolute;
-            height: 100%;
-            right: 0;
-            top: 0;
-            padding: 12px 16px;
+        .actions {
+            display: flex;
+            margin: 0 -15px;
         }
-        .close:hover {
-            background-color: #f44336;
-        }
-
-        /*!* Style the edit button *!*/
-        .edit {
-            height: 100%;
-            position: absolute;
-            right: 50px;
-            top: 0;
-            padding: 12px 16px;
-        }
-        .edit:hover {
-            background-color: green;
-        }
-
-        /*!* Style the header *!*/
-        .taskAdderClassForm {
-            background-color: aliceblue;
-            padding: 30px 40px;
-            text-align: center;
-        }
-
-        /*!* Clear floats after the header *!*/
-        .taskAdderClassForm:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /*!* Style the input *!*/
-        input {
-            margin: 0;
-            border: none;
-            border-radius: 0;
-            width: 75%;
-            padding: 10px;
-            float: left;
-            font-size: 16px;
-        }
-
-        /*!* Style the "Add" button *!*/
-        .addBtn {
-            padding: 10px;
-            width: 25%;
-            background: #d9d9d9;
-            color: #555;
-            float: left;
-            text-align: center;
-            font-size: 16px;
+        .actions button {
             cursor: pointer;
+            margin: 0 15px;
+            font-size: 20px;
+            font-weight: 700;
             transition: 0.5s;
-            border:none;
         }
-        .addBtn:hover {
-            background-color: #bbb;
+        .actions button:hover {
+            opacity: 0.8;
         }
+        .actions button:active {
+            opacity: 0.5;
+        }
+        .edit {
+            text-decoration: none;
+            background-image: linear-gradient(to right, darkblue, darkred);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .delete {
+            color: crimson;
+        }
+
     </style>
 </head>
 <body>
 
-<!--<div id="taskAdder" class="taskAdderClass">-->
-<!--    <h2>My To Do List</h2>-->
-<!--    <input type="text" id="newTask" placeholder="Title...">-->
-<!--    <span onclick="createTask()" class="addBtn">Add</span>-->
-<!--</div>-->
-
-<form id="taskAdderForm" class="taskAdderClassForm">
-    <h2>My To Do List</h2>
-    <input type="text" id="newTask" placeholder="Title...">
-    <button type="submit" class="addBtn">Add</button>
-<!--    <span onclick="createTask()" class="addBtn">Add</span>-->
-</form>
-
-<ul id="myUL">
-    <li>Hit the gym</li>
-    <li class="checked">Pay bills</li>
-    <li>Meet George</li>
-    <li>Buy eggs</li>
-    <li>Read a book</li>
-    <li>Organize office</li>
-    <li>Cry</li>
-</ul>
+<div id="header">
+    <h1>Task manager</h1>
+    <form id="new_task_form">
+        <label for="input_task"></label>
+        <input type="text" name="new_task" placeholder="What are you planning to do?" id="input_task"/>
+        <button type="submit" id="submit_task">Add task</button>
+    </form>
+</div>
+<div id="main_tasks"></div>
 
 <script>
 
+    let form = document.getElementById("new_task_form");
+    let input = document.getElementById("input_task");
+    let main_task_element = document.getElementById("main_tasks");
+    let tasksUl = document.createElement("ul");
+    let h2Element = null;
 
-    let ulList = document.querySelector("ul");
-    // Create a "close" button and append it to each list item
-    function createCloseAndEditButtons() {
-        let closeIcon = document.createElement("img");
-        closeIcon.setAttribute("src", "trash-bin.png")
-        closeIcon.classList.add("close");
-
-        let editIcon = document.createElement("img");
-        editIcon.setAttribute("src", "edit.png")
-        editIcon.classList.add("edit");
-
-        return [editIcon, closeIcon];
+    let tasksFromLocalStorage = JSON.parse(localStorage.getItem("tasks")) || [];
+    if(tasksFromLocalStorage.length) {
+        console.log(tasksFromLocalStorage);
     }
 
-    //Append "close" and "edit" button to each list item
-    let listToDos = document.getElementsByTagName("LI");
-    for (let i = 0; i < listToDos.length; i++) {
-        console.log(listToDos[i])
-        let [first, second] = createCloseAndEditButtons();
-        listToDos[i].append(first, second);
-    }
+    window.addEventListener("load", () => {
 
-    // Click on a close button to hide the current list item
-    let closeElementsList = document.getElementsByClassName("close");
-    for (let i = 0; i < closeElementsList.length; i++) {
-        closeElementsList[i].addEventListener("click", function() {
-            let div = this.parentElement;
-            div.style.display = "none";
-        })
-    }
-
-    // Click on edit button to edit the current list item
-    let editElementsList = document.getElementsByClassName("edit");
-    for (let i = 0; i < editElementsList.length; i++) {
-        editElementsList[i].addEventListener("click", function() {
-            let div = this.parentElement;
-            let promptInput = prompt("Please, enter new task: ");
-            if(promptInput) {
-                div.innerText = promptInput;
-            }
-            let [first, second] = createCloseAndEditButtons();
-            div.append(first, second)
-        })
-    }
-
-    // Add a "checked" symbol when clicking on a list item
-    ulList.addEventListener("click", function(event) {
-        if(event.target.tagName === "LI") {
-            event.target.classList.toggle("checked");
+        if(tasksFromLocalStorage.length) {
+            displayTasks();
         }
-    });
-    // }, false); ????Difference?
 
-    let addButton = document.getElementsByClassName("addBtn")[0];
-    addButton.addEventListener("click", function(event) {
-        event.preventDefault();
-        createTask();
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            submitTask();
+        })
+        input.addEventListener("keypress", (event) => {
+            if(event.key === "Enter") {
+                event.preventDefault();
+                submitTask();
+            }
+        })
     })
 
-    // Create a new list item when clicking on the "Add" button
-    function createTask() {
-        let newLi = document.createElement("li");
-        let inputValue = document.getElementById("newTask").value;
-        let textNode = document.createTextNode(inputValue);
-        newLi.appendChild(textNode);
-        if(inputValue === "" || inputValue === null) {
-            alert("New task should not be empty")
-        } else {
-            ulList.appendChild(newLi);
+    function displayTasks() {
+        if(!h2Element) {
+            h2Element = document.createElement("h2");
+            h2Element.innerText = "Tasks:";
         }
-        let inputField = document.getElementById("newTask");
-        inputField.value = "";
+        tasksFromLocalStorage.forEach((element) => {
+            let task_element = document.createElement("li");
+            task_element.classList.add("task");
 
-        let [edit, close] = createCloseAndEditButtons();
+            let task_content_element = document.createElement("div");
+            task_content_element.classList.add("content");
 
-        newLi.append(edit, close);
+            let task_input_text = document.createElement("input");
+            task_input_text.classList.add("text");
+            task_input_text.type = "text";
+            task_input_text.value = element;
+            task_input_text.setAttribute("readonly", "readonly");
+            task_content_element.appendChild(task_input_text);
 
-        for (let i = 0; i < closeElementsList.length; i++) {
-            closeElementsList[i].addEventListener("click", function() {
-                let div = this.parentElement;
-                div.style.display = "none";
+            let task_button_holder = document.createElement("div");
+            task_button_holder.classList.add("actions");
+
+            let task_edit_button = document.createElement("button");
+            task_edit_button.classList.add("edit");
+            task_edit_button.innerText = "Edit";
+
+            let task_delete_button = document.createElement("button");
+            task_delete_button.classList.add("delete");
+            task_delete_button.innerText = "Delete";
+
+            task_button_holder.append(task_edit_button, task_delete_button)
+            task_element.append(task_content_element, task_button_holder);
+            tasksUl.append(task_element);
+            main_task_element.append(h2Element, tasksUl);
+
+            task_edit_button.addEventListener("click", (event) => {
+                editTask();
             });
-        }
 
-        for (let i = 0; i < editElementsList.length; i++) {
-            editElementsList[i].addEventListener("click", function() {
-                let div = this.parentElement;
-                div.innerText = prompt("Please, enter new task: ");
-                let [first, second] = createCloseAndEditButtons();
-                div.append(first, second)
+            task_element.addEventListener("click", (event) => {
+                event.preventDefault();
+                task_element.classList.toggle("checked");
+                task_input_text.classList.toggle("checked");
             })
-        }
+
+            task_edit_button.addEventListener("keypress", (event) => {
+                if(event.key === "Enter") {
+                    event.preventDefault();
+                    editTask();
+                    tasksFromLocalStorage.push(task_input_text.value);
+                    localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+                }
+            });
+            task_delete_button.addEventListener("click", (event) => {
+                tasksUl.removeChild(task_element);
+                let indexOfEl = tasksFromLocalStorage.indexOf(task_input_text.value);
+                tasksFromLocalStorage.splice(indexOfEl, 1);
+                localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+            });
+
+            function editTask() {
+                if(task_edit_button.innerText.toLowerCase() === "edit") {
+                    task_edit_button.innerText = "Save";
+                    task_input_text.removeAttribute("readonly");
+                    task_input_text.focus();
+                } else {
+                    task_edit_button.innerText = "Edit";
+                    task_input_text.setAttribute("readonly", "readonly");
+                }
+            }
+        })
 
     }
+
+    function submitTask() {
+
+        function editTask() {
+            if(task_edit_button.innerText.toLowerCase() === "edit") {
+                task_edit_button.innerText = "Save";
+                task_input_text.removeAttribute("readonly");
+                task_input_text.focus();
+            } else {
+                task_edit_button.innerText = "Edit";
+                task_input_text.setAttribute("readonly", "readonly");
+            }
+        }
+
+
+
+        if(!h2Element) {
+            h2Element = document.createElement("h2");
+            h2Element.innerText = "Tasks:";
+        }
+
+
+        let task = input.value;
+        let task_element = document.createElement("li");
+        task_element.classList.add("task");
+
+        let task_content_element = document.createElement("div");
+        task_content_element.classList.add("content");
+
+
+        let task_input_text = document.createElement("input");
+        task_input_text.classList.add("text");
+        task_input_text.type = "text";
+        task_input_text.value = task;
+        task_input_text.setAttribute("readonly", "readonly");
+        task_content_element.appendChild(task_input_text);
+
+        let task_button_holder = document.createElement("div");
+        task_button_holder.classList.add("actions");
+
+        let task_edit_button = document.createElement("button");
+        task_edit_button.classList.add("edit");
+        task_edit_button.innerText = "Edit";
+
+        let task_delete_button = document.createElement("button");
+        task_delete_button.classList.add("delete");
+        task_delete_button.innerText = "Delete";
+
+        task_button_holder.append(task_edit_button, task_delete_button)
+        task_element.append(task_content_element, task_button_holder);
+        tasksUl.append(task_element);
+        main_task_element.append(h2Element, tasksUl);
+
+        input.value = "";
+
+        task_element.addEventListener("click", (event) => {
+            event.preventDefault();
+            task_element.classList.toggle("checked");
+            task_input_text.classList.toggle("checked");
+        })
+
+        tasksFromLocalStorage.push(task_input_text.value);
+        localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+
+        task_edit_button.addEventListener("click", (event) => {
+            editTask();
+        });
+        task_edit_button.addEventListener("keypress", (event) => {
+            if(event.key === "Enter") {
+                event.preventDefault();
+                editTask();
+                tasksFromLocalStorage.push(task_input_text.value);
+                localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+            }
+        });
+        task_delete_button.addEventListener("click", (event) => {
+            tasksUl.removeChild(task_element);
+            let indexOfEl = tasksFromLocalStorage.indexOf(task_input_text.value);
+            tasksFromLocalStorage.splice(indexOfEl, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+        })
+    }
+
+
+
 
 </script>
 

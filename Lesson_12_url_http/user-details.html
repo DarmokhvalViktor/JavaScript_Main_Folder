@@ -10,83 +10,89 @@
     let url = new URL(location.href);
     let usersId = JSON.parse(url.searchParams.get("value"));
 
-    // function recursiveKeyValueGetter(object) {
-    //     for(let key in object) {
-    //         if(typeof object[key] === "object" && object[key] !== null) {
-    //             recursiveKeyValueGetter(object[key]);
-    //         } else {
-    //             let p = document.createElement("p");
-    //             p.innerText = `${key}: ${object[key]}`;
-    //             document.body.append(p);
-    //         }
-    //     }
-    // }
+    function recursiveKeyValueGetter(object, divToAppend) {
+        for(let key in object) {
+            if(typeof object[key] === "object" && object[key] !== null) {
+                let ul = document.createElement("ul");
+                ul.innerText = `${key}:`
+                document.body.append(ul);
+                recursiveKeyValueGetter(object[key], ul);
+            } else {
+                if(divToAppend.nodeName !== "UL") {
+                    let ul = document.createElement("ul");
+                    ul.innerText = `${key}: ${object[key]}`;
+                    divToAppend.append(ul);
+                } else {
+                    let li = document.createElement("li");
+                    li.innerText = `${key}: ${object[key]}`;
+                    divToAppend.append(li);
+                }
+
+            }
+        }
+    }
 
     async function getUser() {
         let usersArr = await fetch("https://jsonplaceholder.typicode.com/users/" + usersId);
         return usersArr.json();
     }
 
-    async function display(user) {
-
-    }
-
     async function render() {
         let user = await getUser();
-        console.log(user);
-        console.log(user.id)
-        console.log(user.address.suite)
-        let userDiv = document.createElement("div");
-
-        let id = document.createElement("div");
-        let name = document.createElement("div");
-        let username = document.createElement("div");
-        let email = document.createElement("div");
-        let phone = document.createElement("div");
-        let website = document.createElement("div");
-
-        id.innerText = `id = ${user.id}`;
-        name.innerText = `name = ${user.name}`;
-        username.innerText = `username = ${user.username}`;
-        email.innerText = `email = ${user.email}`;
-        phone.innerText = `phone = ${user.phone}`;
-        website.innerText = `website = ${user.website}`;
-
-        let address = document.createElement("ul");
-        address.innerText = `address:`;
-        let street = document.createElement("li");
-        let suite = document.createElement("li");
-        let city = document.createElement("li");
-        let zipcode = document.createElement("li");
-
-        let geo = document.createElement("li");
-        geo.innerText = `geo:`;
-        let lat = document.createElement("div");
-        let lng = document.createElement("div");
-
-
-        street.innerText = `street = ${user.address.street}`;
-        suite.innerText = `suite = ${user.address.suite}`;
-        city.innerText = `city = ${user.address.city}`;
-        zipcode.innerText = `zipcode = ${user.address.zipcode}`;
-        lat.innerText = `lat = ${user.address.geo.lat}`;
-        lng.innerText = `lng = ${user.address.geo.lng}`;
-
-        geo.append(lat, lng);
-        address.append(street, suite, city, zipcode, geo);
-
-        let company = document.createElement("ul");
-        company.innerText = `company:`;
-        let companyName = document.createElement("li");
-        let catchPhrase = document.createElement("li");
-        let bs = document.createElement("li");
-        companyName.innerText = `companyName = ${user.company.name}`;
-        catchPhrase.innerText = `catchPhrase = ${user.company.catchPhrase}`;
-        bs.innerText = `bs = ${user.company.bs}`;
-
-        company.append(companyName, catchPhrase, bs);
-        userDiv.append(id, name, username, email, phone, website, address, company);
-        document.body.appendChild(userDiv);
+        // console.log(user);
+        // console.log(user.id)
+        // console.log(user.address.suite)
+        // let userDiv = document.createElement("div");
+        //
+        // let id = document.createElement("div");
+        // let name = document.createElement("div");
+        // let username = document.createElement("div");
+        // let email = document.createElement("div");
+        // let phone = document.createElement("div");
+        // let website = document.createElement("div");
+        //
+        // id.innerText = `id = ${user.id}`;
+        // name.innerText = `name = ${user.name}`;
+        // username.innerText = `username = ${user.username}`;
+        // email.innerText = `email = ${user.email}`;
+        // phone.innerText = `phone = ${user.phone}`;
+        // website.innerText = `website = ${user.website}`;
+        //
+        // let address = document.createElement("ul");
+        // address.innerText = `address:`;
+        // let street = document.createElement("li");
+        // let suite = document.createElement("li");
+        // let city = document.createElement("li");
+        // let zipcode = document.createElement("li");
+        //
+        // let geo = document.createElement("li");
+        // geo.innerText = `geo:`;
+        // let lat = document.createElement("div");
+        // let lng = document.createElement("div");
+        //
+        //
+        // street.innerText = `street = ${user.address.street}`;
+        // suite.innerText = `suite = ${user.address.suite}`;
+        // city.innerText = `city = ${user.address.city}`;
+        // zipcode.innerText = `zipcode = ${user.address.zipcode}`;
+        // lat.innerText = `lat = ${user.address.geo.lat}`;
+        // lng.innerText = `lng = ${user.address.geo.lng}`;
+        //
+        // geo.append(lat, lng);
+        // address.append(street, suite, city, zipcode, geo);
+        //
+        // let company = document.createElement("ul");
+        // company.innerText = `company:`;
+        // let companyName = document.createElement("li");
+        // let catchPhrase = document.createElement("li");
+        // let bs = document.createElement("li");
+        // companyName.innerText = `companyName = ${user.company.name}`;
+        // catchPhrase.innerText = `catchPhrase = ${user.company.catchPhrase}`;
+        // bs.innerText = `bs = ${user.company.bs}`;
+        //
+        // company.append(companyName, catchPhrase, bs);
+        // userDiv.append(id, name, username, email, phone, website, address, company);
+        // document.body.appendChild(userDiv);
 
         // "id": 1,
         //     "name": "Leanne Graham",
@@ -110,7 +116,7 @@
         //         "bs": "harness real-time e-markets"
         // }
 
-        // recursiveKeyValueGetter(user);
+        recursiveKeyValueGetter(user, document.body);
     }
     render();
 
