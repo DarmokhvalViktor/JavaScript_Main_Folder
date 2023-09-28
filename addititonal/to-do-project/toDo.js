@@ -32,7 +32,7 @@ function editTask(task_edit_button, task_input_text) {
     } else {
         task_edit_button.innerText = "Edit";
         task_input_text.setAttribute("readonly", "readonly");
-        tasksFromLocalStorage[indexOfTask] = {task: task_input_text.value, date: dateNow};
+        tasksFromLocalStorage[indexOfTask] = {task: task_input_text.value, date: dateNow, isCompleted: false};
         localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
     }
 }
@@ -54,17 +54,16 @@ function createDeleteButton() {
         location.reload();
     });
     h2Element.appendChild(deleteAllTasksButton);
-
 }
 
 function displayTasks() {
     createH2ElementIfNotPresent();
     tasksFromLocalStorage.forEach((element) => {
-        createDivs(element.task,  "Task creation date: " + element.date);
+        createDivs(element.task,  "Task creation date: " + element.date, element.isCompleted);
     })
 }
 
-function createDivs(taskValue, dateValue) {
+function createDivs(taskValue, dateValue, isCompleted) {
     let task_element = document.createElement("li");
     task_element.classList.add("task");
 
@@ -108,27 +107,31 @@ function createDivs(taskValue, dateValue) {
 
     main_task_element.append(h2Element, tasksUl);
 
+    if(isCompleted) {
+        task_element.classList.toggle("checked");
+        task_input_text.classList.toggle("checked");
+        date_element.classList.toggle("checked");
+    }
+
     task_element.addEventListener("click", (event) => {
         event.preventDefault();
         task_element.classList.toggle("checked");
         task_input_text.classList.toggle("checked");
         date_element.classList.toggle("checked");
+        let indexOfEl = tasksFromLocalStorage.findIndex(object => object.task === taskValue);
+        tasksFromLocalStorage[indexOfEl].isCompleted = !tasksFromLocalStorage[indexOfEl].isCompleted;
+        localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
+
     });
+    //TODO need to add time, when task is finished, like added when task is created.
+    //TODO add verification that user can't add same task again.
 
     task_edit_button.addEventListener("click", () => {
         editTask(task_edit_button, task_input_text);
     });
-    task_edit_button.addEventListener("keypress", (event) => {
-        if(event.key === "Enter") {
-            event.preventDefault();
-            editTask();
-            tasksFromLocalStorage.push(task_input_text.value);
-            localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
-        }
-    });
     task_delete_button.addEventListener("click", () => {
         tasksUl.removeChild(task_element);
-        let indexOfEl = tasksFromLocalStorage.indexOf(task_input_text.value);
+        let indexOfEl = tasksFromLocalStorage.indexOf(dateValue);
         tasksFromLocalStorage.splice(indexOfEl, 1);
         localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
     });
@@ -150,9 +153,9 @@ function submitTask() {
         createH2ElementIfNotPresent();
 
         let dateNow = getDateNow();
-        createDivs( task, `Task creation date: ` + dateNow);
+        createDivs( task, `Task creation date: ` + dateNow, false);
 
-        tasksFromLocalStorage.push({task: task, date: dateNow});
+        tasksFromLocalStorage.push({task: task, date: dateNow, isCompleted: false});
         localStorage.setItem("tasks", JSON.stringify(tasksFromLocalStorage));
 
         input.value = "";

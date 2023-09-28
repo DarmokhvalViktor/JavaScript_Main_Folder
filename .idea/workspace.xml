@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Mini project on javascript.">
+    <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="added task creation time, background.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addititonal/To-DoExampleHowItShouldBe.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/To-DoExampleHowItShouldBe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addititonal/edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/edit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addititonal/toDo.html" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/toDo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addititonal/trash-bin.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/trash-bin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/to-do-project/toDo.css" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/toDo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/to-do-project/toDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/toDo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1695740475054" duration="604000" />
       <workItem from="1695811208265" duration="15363000" />
       <workItem from="1695843542717" duration="232000" />
-      <workItem from="1695894134357" duration="10023000" />
+      <workItem from="1695894134357" duration="13556000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -374,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695894157003</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="some upgrades in to-do list">
+      <created>1695907483195</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1695907483196</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added task creation time, background.">
+      <created>1695907535930</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1695907535930</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,8 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init commit" />
-    <MESSAGE value="Changed representation of age from string to number." />
     <MESSAGE value="Homework for Javascript lesson #2(Objects, Arrays, If and Switch statements)." />
     <MESSAGE value="Some code clean-up and refactoring from switch case to if-else." />
     <MESSAGE value="Some more code clean-up and refactoring." />
@@ -423,6 +433,8 @@
     <MESSAGE value="Homework №12. Url, http." />
     <MESSAGE value="Homework №12. Refactored" />
     <MESSAGE value="Mini project on javascript." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mini project on javascript." />
+    <MESSAGE value="some upgrades in to-do list" />
+    <MESSAGE value="added task creation time, background." />
+    <option name="LAST_COMMIT_MESSAGE" value="added task creation time, background." />
   </component>
 </project>
