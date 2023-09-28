@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2c643b51-367e-482c-bc7e-32d236ea9307" name="Changes" comment="Mini project on javascript.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_12_url_http/user-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_url_http/user-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/To-DoExampleHowItShouldBe.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/To-DoExampleHowItShouldBe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/edit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/toDo.html" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/toDo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addititonal/trash-bin.png" beforeDir="false" afterPath="$PROJECT_DIR$/addititonal/to-do-project/trash-bin.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,28 +38,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.16.1",
-    "javascript.nodejs.core.library.typings.version": "18.16.1",
-    "last_opened_file_path": "F:/Programming/__Okten_School/JavaScript/TymyrDihtyar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Programming/__Okten_School/JavaScript/TymyrDihtyar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Programming\__Okten_School\JavaScript\JavaScript\Lesson_1_homework" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Programming\__Okten_School\JavaScript\JavaScript\addititonal\to-do-project" />
     </key>
   </component>
   <component name="RunManager">
@@ -135,6 +141,7 @@
       <workItem from="1695740475054" duration="604000" />
       <workItem from="1695811208265" duration="15363000" />
       <workItem from="1695843542717" duration="232000" />
+      <workItem from="1695894134357" duration="10023000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1692127354315</created>
@@ -360,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695663537185</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Mini project on javascript.">
+      <created>1695894157003</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1695894157003</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +422,7 @@
     <MESSAGE value="Additional To-Do\schedule planner. First step - can add new task, can delete tasks. Update button works but only once" />
     <MESSAGE value="Homework №12. Url, http." />
     <MESSAGE value="Homework №12. Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework №12. Refactored" />
+    <MESSAGE value="Mini project on javascript." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mini project on javascript." />
   </component>
 </project>
