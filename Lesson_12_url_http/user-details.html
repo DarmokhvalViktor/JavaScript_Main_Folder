@@ -13,7 +13,6 @@
     document.body.appendChild(mainUl);
 
     function recursiveKeyValueGetter(object, divToAppend) {
-
         for(let key in object) {
             if(typeof object[key] === "object" && object[key] !== null) {
                 let li = document.createElement("li");
