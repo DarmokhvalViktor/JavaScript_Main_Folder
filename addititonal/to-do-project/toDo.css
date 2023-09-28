@@ -91,6 +91,7 @@ h2 {
 }
 .dateElement.checked {
     text-decoration: line-through;
+
 }
 .taskAndButtonDiv {
     display: flex;
